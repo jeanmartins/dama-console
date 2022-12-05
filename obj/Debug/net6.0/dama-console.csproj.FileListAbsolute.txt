@@ -1,0 +1,15 @@
+C:\Users\jean_martins\source\repos\dama-console\bin\Debug\net6.0\dama-console.exe
+C:\Users\jean_martins\source\repos\dama-console\bin\Debug\net6.0\dama-console.deps.json
+C:\Users\jean_martins\source\repos\dama-console\bin\Debug\net6.0\dama-console.runtimeconfig.json
+C:\Users\jean_martins\source\repos\dama-console\bin\Debug\net6.0\dama-console.dll
+C:\Users\jean_martins\source\repos\dama-console\bin\Debug\net6.0\dama-console.pdb
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.csproj.AssemblyReference.cache
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.AssemblyInfoInputs.cache
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.AssemblyInfo.cs
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.csproj.CoreCompileInputs.cache
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.dll
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\refint\dama-console.dll
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.pdb
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\dama-console.genruntimeconfig.cache
+C:\Users\jean_martins\source\repos\dama-console\obj\Debug\net6.0\ref\dama-console.dll
