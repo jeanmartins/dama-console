@@ -13,7 +13,7 @@ namespace dama_console
                 for (int j = 0; j < 8; j++)
                 {
 
-                    tab.colocarPeca(new Peao(tab, Cor.Branca), new Posicao(i, j));
+                    tab.colocarPeca(new Peao(tab, Cor.Preta), new Posicao(i, j));
                 }
             }
             Tela.imprimirTabuleiro(tab);
