@@ -16,17 +16,6 @@ namespace Pecas
         {
             return Tabuleiro.retornarPeca(pos) == null;
         }
-        private bool podeMover(Posicao pos)
-        {
-            Peca p = Tabuleiro.retornarPeca(pos);
-            return p == null || p.Cor != Cor;
-        }
-        private bool existeInimigo(Posicao pos)
-        {
-            Peca p = Tabuleiro.retornarPeca(pos);
-            return p != null && p.Cor != Cor;
-        }
-
         public override bool[,] movimentosPossiveis()
         {
             bool[,] mat = new bool[Tabuleiro.Linhas, Tabuleiro.Colunas];
