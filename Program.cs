@@ -1,4 +1,5 @@
-﻿using Pecas;
+﻿using Jogo;
+using Pecas;
 using Tabuleiro;
 
 namespace dama_console
@@ -7,16 +8,8 @@ namespace dama_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro.Tabuleiro tab = new Tabuleiro.Tabuleiro(8, 8);
-            for (int i = 0; i < 2; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-
-                    tab.colocarPeca(new Peao(tab, Cor.Preta), new Posicao(i, j));
-                }
-            }
-            Tela.imprimirTabuleiro(tab);
+            Partida partida = new Partida();
+            Tela.imprimirTabuleiro(partida.Tabuleiro);
 
         }
     }

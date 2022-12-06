@@ -16,7 +16,7 @@ namespace Tabuleiro
         {
             Linhas = linhas;
             Colunas = colunas;
-            Pecas = new Peca[linhas, colunas];
+            Pecas  = new Peca[linhas, colunas];
         }
 
         public Peca retornarPeca(Posicao pos)
@@ -34,6 +34,18 @@ namespace Tabuleiro
             return retornarPeca(pos) != null;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(retornarPeca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = retornarPeca(pos);
+            aux.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+
+        }
         public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))
@@ -59,5 +71,6 @@ namespace Tabuleiro
                 throw new TabuleiroException("Posição Inválida!");
             }
         }
+       
     }
 }
