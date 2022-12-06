@@ -11,14 +11,17 @@ namespace Jogo
     public class Partida
     {
         public Tabuleiro.Tabuleiro Tabuleiro { get; private set; }
-        private int Turno { get; set; }
-        public Cor JogadorAtual { get; set; }
+        public int Turno { get; private set; }
+        public Cor JogadorAtual { get; private set; }
+        public bool Terminada { get; set; }
+        private HashSet<Peca> Pecas;
 
         public Partida()
         {
             Tabuleiro = new Tabuleiro.Tabuleiro(8, 8);
             Turno = 1;
             JogadorAtual = Cor.Branca;
+            Terminada = false;
             ColocarPecas();
         }
 
@@ -29,10 +32,43 @@ namespace Jogo
             Tabuleiro.retirarPeca(destino);
             Tabuleiro.colocarPeca(p, destino);
         }
+
+        public void realizaJogada(Posicao origem, Posicao destino)
+        {
+            ExecutaMovimento(origem, destino);
+
+            Peca p = Tabuleiro.retornarPeca(destino);
+
+            if (p is Peao)
+            {
+                if ((p.Cor == Cor.Branca && destino.Linha == 0) || (p.Cor == Cor.Preta && destino.Linha == 7))
+                {
+                    p = Tabuleiro.retirarPeca(destino);
+                    Pecas.Remove(p);
+                    Peca dama = new Dama(Tabuleiro, p.Cor);
+                    Tabuleiro.colocarPeca(dama, destino);
+                    Pecas.Add(dama);
+                }
+            }
+            Turno++;
+            mudaJogador();
+        }
+
+
+        private void mudaJogador()
+        {
+            if (JogadorAtual == Cor.Branca)
+            {
+                JogadorAtual = Cor.Preta;
+            }
+            else
+            {
+                JogadorAtual = Cor.Branca;
+            }
+        }
         public void colocarNovaPeca(char coluna, int linha, Peca peca)
         {
             Tabuleiro.colocarPeca(peca, new PosicaoPeca(coluna, linha).toPosicao());
-            //pecas.Add(peca);
         }
         private void ColocarPecas()
         {

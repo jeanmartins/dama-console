@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tabuleiro
 {
-    public class Peca: IPeca
+    public abstract class Peca: IPeca
     {
         public Posicao? Posicao { get; set; }
         public Cor Cor { get; set; }
@@ -26,5 +26,7 @@ namespace Tabuleiro
         {
             qteMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }
